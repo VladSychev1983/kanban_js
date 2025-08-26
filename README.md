@@ -1,1 +1,4 @@
-# Kanban desk
+![CI](https://github.com/VladSychev1983/kanban_js/actions/workflows/web.yml/badge.svg)
+
+# Kanban Доска.
+[Ссылка на Игру ](https://vladsychev1983.github.io/kanban_js/)
