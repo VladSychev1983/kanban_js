@@ -1,1 +1,3 @@
-import { initKanban } from "./kanban";
+import initKanban from "./kanban";
+
+initKanban;

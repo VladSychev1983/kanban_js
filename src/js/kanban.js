@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
     // Обработчик удаления карточки
-    cardElement.querySelector(".delete-card").addEventListener("click", (e) => {
+    cardElement.querySelector(".delete-card").addEventListener("click", () => {
       const columnId = cardElement.closest(".kanban-column").dataset.columnId;
       deleteCard(columnId, card.id);
     });
@@ -135,7 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     //показываем и скрываем карт контейнер
     for (const element of Object.keys(columnNames)) {
-      console.log(element);
       const todoConteiner = document.querySelector(
         `[data-column-id=${element}]`,
       );
@@ -170,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 0); // Небольшая задержка, чтобы класс применился после того, как браузер сделает скриншот для перетаскивания
   }
 
-  function handleDragEnd(e) {
+  function handleDragEnd() {
     draggedCard.classList.remove("dragging");
     draggedCard = null;
     originalColumnId = null;
