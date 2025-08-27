@@ -147,6 +147,15 @@ document.addEventListener("DOMContentLoaded", () => {
       hideShowButton.addEventListener("click", () => {
         cardContainer.classList.toggle("enabled");
       });
+      //при наведении на кнопку добавить карточку меняем курсор
+      hideShowButton.addEventListener("mouseover", () => {
+        hideShowButton.style.textDecoration = "underline";
+        hideShowButton.style.cursor = "pointer";
+      });
+      hideShowButton.addEventListener("mouseout", () => {
+        hideShowButton.style.textDecoration = "none";
+        hideShowButton.style.cursor = "default";
+      });
       hideShowButton.removeEventListener("click", () => {
         cardContainer.classList.toggle("enabled");
       });
